@@ -942,11 +942,57 @@ button, input { font: inherit; }
 .bar-fill.teal { background: linear-gradient(90deg, #0f766e, #2dd4bf); }
 .bar-fill.amber { background: linear-gradient(90deg, #b45309, #fbbf24); }
 .bar-fill.blue { background: linear-gradient(90deg, #1d4ed8, #60a5fa); }
-.donut-wrap { display: grid; place-items: center; position: relative; }
-.donut-wrap strong {
-  position: absolute; text-align: center; font-size: 18px; line-height: 1.2;
+.water-card .water-caption,
+.water-card .water-foot,
+.rate-intro,
+.rate-source {
+  margin: 0 0 10px; font-size: 12px; color: var(--muted); line-height: 1.5;
 }
-.donut-wrap strong small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; }
+.water-card .water-foot { margin: 10px 0 0; }
+.rate-source { margin-top: 12px; }
+.water-gauge { margin-top: 6px; }
+.water-scale {
+  display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 6px;
+}
+.water-track {
+  position: relative; height: 28px; border-radius: 999px; background: #eef2f7;
+  border: 1px solid var(--line); overflow: visible;
+}
+.water-fill {
+  height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, #0f766e 0%, #2dd4bf 70%, #7c3aed 100%);
+}
+.water-goal {
+  position: absolute; top: -6px; bottom: -6px; width: 2px; background: #111;
+  transform: translateX(-1px);
+}
+.water-goal::after {
+  content: "目标"; position: absolute; top: -18px; left: 50%; transform: translateX(-50%);
+  font-size: 10px; font-weight: 700; color: #111; white-space: nowrap;
+}
+.water-legend {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  margin-top: 12px; font-size: 12px; color: var(--muted);
+}
+.water-legend i {
+  display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px;
+  vertical-align: -2px;
+}
+.water-legend .lg-fill { background: linear-gradient(90deg, #0f766e, #7c3aed); }
+.water-legend .lg-goal { width: 2px; height: 14px; border-radius: 0; background: #111; }
+.water-delta { margin-left: auto; color: #0f766e; font-weight: 700; }
+.rate-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+.rate-table {
+  width: 100%; border-collapse: collapse; font-size: 12px; min-width: 720px;
+}
+.rate-table th, .rate-table td {
+  padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top;
+}
+.rate-table th { background: #f7f8fb; color: var(--muted); font-weight: 700; white-space: nowrap; }
+.rate-table td:nth-child(2),
+.rate-table td:nth-child(3),
+.rate-table td:nth-child(4) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.rate-table tr.rate-total td { background: #f0f7ff; border-bottom: none; font-weight: 700; }
 .lifecycle {
   display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 14px;
 }
