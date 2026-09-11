@@ -818,13 +818,13 @@ button, input { font: inherit; }
 .loop-diff span { font-size: 12.5px; color: var(--muted); line-height: 1.45; }
 .loop-body {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
-  gap: 18px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch;
   margin-top: 6px;
 }
 .loop-board {
-  position: relative; width: min(640px, 100%); aspect-ratio: 1.22 / 1;
+  position: relative; width: min(680px, 100%); aspect-ratio: 1.22 / 1;
   margin: 0 auto;
 }
 .loop-ring { position: absolute; inset: 6% 4%; width: 92%; height: 88%; pointer-events: none; z-index: 0; overflow: visible; }
@@ -872,7 +872,8 @@ button, input { font: inherit; }
   background: #faf8ff;
   border: 1px solid var(--yl-mid);
   border-radius: 16px;
-  padding: 12px 12px 8px;
+  padding: 14px 14px 10px;
+  width: 100%;
 }
 .pain-opp h4 {
   margin: 0 0 10px;
@@ -903,10 +904,10 @@ button, input { font: inherit; }
 .pain-opp-live h4 span { border-color: #f9a8d4; }
 .po-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 78px;
-  gap: 8px;
+  grid-template-columns: 1fr 1fr 96px;
+  gap: 10px;
   align-items: stretch;
-  padding: 8px 0;
+  padding: 10px 0;
   border-top: 1px dashed #e4daf6;
 }
 .pain-opp-live .po-row { border-top-color: #fbcfe8; }
@@ -1115,10 +1116,6 @@ button, input { font: inherit; }
 }
 .lifecycle b { display: block; font-size: 11px; color: var(--yl); margin-bottom: 4px; }
 .lifecycle span { font-size: 12px; color: var(--muted); }
-@media (max-width: 1100px) {
-  .loop-body { grid-template-columns: 1fr; }
-  .loop-board { width: min(560px, 100%); }
-}
 @media (max-width: 960px) {
   .loop-card-head, .rev-hero, .chart-grid, .lifecycle { grid-template-columns: 1fr 1fr; }
   .loop-board { width: min(520px, 100%); }
